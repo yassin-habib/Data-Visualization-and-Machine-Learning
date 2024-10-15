@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML Model Interface</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333399;
+            text-align: center;
+        }
+        form {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333399;
+        }
+        input[type="file"] {
+            border: 2px solid #333399;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 20px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #333399;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            margin: 0 auto;
+        }
+        input[type="submit"]:hover {
+            background-color: #1a1a80;
+        }
+    </style>
+</head>
+<body>
+    <h1>Machine Learning Model Interface</h1>
+    <form action="/train" method="post" enctype="multipart/form-data">
+        <label for="train_file">Upload Dataset to Train Model:</label>
+        <input type="file" name="file" id="train_file">
+        <input type="submit" value="Train Model">
+    </form>
+    <br>
+    <form action="/predict" method="post" enctype="multipart/form-data">
+        <label for="predict_file">Upload Dataset to Make Predictions:</label>
+        <input type="file" name="file" id="predict_file">
+        <input type="submit" value="Make Predictions">
+    </form>
+</body>
+</html>
